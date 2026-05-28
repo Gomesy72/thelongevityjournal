@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to The Longevity Journal — Subscription Confirmed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --ink: #0e0e0e;
+            --paper: #f5f0e8;
+            --accent: #2d6a4f;
+            --accent-light: #74c69d;
+            --amber: #e9c46a;
+            --rust: #c1440e;
+            --muted: #8a8070;
+            --rule: #c8bfaa;
+            --white: #ffffff;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'DM Mono', 'Courier New', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--ink);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        /* Noise overlay */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+            opacity: 0.06;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+        }
+
+        .confirmed-container {
+            max-width: 600px;
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Logo area */
+        .confirmed-logo {
+            margin-bottom: 40px;
+        }
+
+        .confirmed-logo .logo-text {
+            font-family: var(--font-body);
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-light);
+            margin-bottom: 8px;
+        }
+
+        .confirmed-logo h1 {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--paper);
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .confirmed-logo .tagline {
+            font-family: var(--font-body);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        /* Success badge */
+        .success-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(45, 106, 79, 0.2);
+            border: 1px solid var(--accent);
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin-bottom: 32px;
+        }
+
+        .success-badge .check-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 12px;
+        }
+
+        .success-badge span {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-light);
+        }
+
+        /* Headline */
+        .confirmed-headline {
+            font-family: var(--font-heading);
+            font-size: 42px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.2;
+            color: var(--paper);
+            margin-bottom: 20px;
+        }
+
+        /* Subtext */
+        .confirmed-subtext {
+            font-family: var(--font-body);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: var(--muted);
+            margin-bottom: 40px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* What happens next */
+        .what-next {
+            background: rgba(245, 240, 232, 0.05);
+            border: 1px solid var(--rule);
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .what-next h3 {
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--amber);
+            margin-bottom: 20px;
+        }
+
+        .next-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .next-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .next-number {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent-light);
+            flex-shrink: 0;
+            width: 24px;
+        }
+
+        .next-content h4 {
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--paper);
+            margin-bottom: 4px;
+        }
+
+        .next-content p {
+            font-family: var(--font-body);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* CTA */
+        .confirmed-cta {
+            margin-bottom: 32px;
+        }
+
+        .btn-amber {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--amber);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 500;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-amber:hover {
+            background: #f0d88a;
+            transform: translateY(-1px);
+        }
+
+        /* Redirect notice */
+        .redirect-notice {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 20px;
+        }
+
+        .redirect-notice span {
+            color: var(--accent-light);
+        }
+
+        /* Footer */
+        .confirmed-footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--rule);
+        }
+
+        .confirmed-footer p {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .confirmed-footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        .confirmed-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .confirmed-headline {
+                font-size: 28px;
+            }
+
+            .what-next {
+                padding: 24px;
+            }
+
+            .confirmed-container {
+                padding: 40px 20px;
+            }
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .confirmed-container {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+
+    <div class="confirmed-container">
+        <!-- Logo -->
+        <div class="confirmed-logo">
+            <div class="logo-text">TLJ</div>
+            <h1>The Longevity Journal</h1>
+            <div class="tagline">AI-Curated Research · Human-Tested</div>
+        </div>
+
+        <!-- Success badge -->
+        <div class="success-badge">
+            <div class="check-icon">&#10003;</div>
+            <span>Subscription Confirmed</span>
+        </div>
+
+        <!-- Headline -->
+        <h2 class="confirmed-headline">Welcome to the community.</h2>
+
+        <p class="confirmed-subtext">
+            You're officially on the list. Every Thursday, you'll get the three most important longevity breakthroughs of the week — distilled into a 5-minute read you can actually understand.
+        </p>
+
+        <!-- What happens next -->
+        <div class="what-next">
+            <h3>What happens next</h3>
+
+            <div class="next-item">
+                <div class="next-number">01</div>
+                <div class="next-content">
+                    <h4>Your PDF is on its way</h4>
+                    <p>Check your inbox for The Longevity Protocol PDF with 12 evidence-based interventions.</p>
+                </div>
+            </div>
+
+            <div class="next-item">
+                <div class="next-number">02</div>
+                <div class="next-content">
+                    <h4>First briefing this Thursday</h4>
+                    <p>Our AI agents are already scanning 200+ sources. Your first curated issue arrives in 2-3 days.</p>
+                </div>
+            </div>
+
+            <div class="next-item">
+                <div class="next-number">03</div>
+                <div class="next-content">
+                    <h4>No spam, ever</h4>
+                    <p>One email per week. Unsubscribe anytime with one click. Your data is never sold.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="confirmed-cta">
+            <a href="https://gomesy72.github.io/thelongevityjournal/" class="btn-amber">
+                Explore The Journal &rarr;
+            </a>
+        </div>
+
+        <div class="redirect-notice">
+            Redirecting to the latest issue in <span id="countdown">8</span> seconds...
+        </div>
+
+        <!-- Footer -->
+        <div class="confirmed-footer">
+            <p>
+                Questions? Hit reply on any email or <a href="mailto:shellyai2026@gmail.com">contact us</a>.<br>
+                <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms</a> · <a href="medical-disclaimer.html">Disclaimer</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Countdown redirect
+        let seconds = 8;
+        const countdownEl = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            seconds--;
+            if (countdownEl) {
+                countdownEl.textContent = seconds;
+            }
+            
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = 'https://gomesy72.github.io/thelongevityjournal/';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

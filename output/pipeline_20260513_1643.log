@@ -1,0 +1,41 @@
+[16:43:26] ============================================================
+[16:43:26] THE LONGEVITY JOURNAL - WEEKLY PIPELINE
+[16:43:26] Mode: TEST (dry run)
+[16:43:26] Started: 2026-05-13 16:43:26
+[16:43:26] ============================================================
+[16:43:26] ==================================================
+[16:43:26] STEP 1: Research Phase
+[16:43:26] ==================================================
+[16:43:26] Searching 5 topics via Tavily...
+[16:43:26] TEST MODE: Using sample research data
+[16:43:26] ==================================================
+[16:43:26] STEP 2: Article Generation
+[16:43:26] ==================================================
+[16:43:26] Generating with model: ollama/kimi-k2.6:cloud
+[16:43:26] TEST MODE: Would generate article here
+[16:43:26] In live mode, calls Ollama API with prompt
+[16:43:26] ==================================================
+[16:43:26] STEP 3: HTML Conversion
+[16:43:26] ==================================================
+[16:43:26] Creating default HTML template...
+[16:43:26] Created article_template.html
+[16:43:26] TEST MODE: Would convert to HTML
+[16:43:26] Output file: article_20260513.html
+[16:43:26] ==================================================
+[16:43:26] STEP 4: Website Update
+[16:43:26] ==================================================
+[16:43:26] TEST MODE: Would update index.html and push to GitHub
+[16:43:26] Commands that would run:
+[16:43:26]   1. Add article card to index.html
+[16:43:26]   2. git add -A
+[16:43:26]   3. git commit -m 'Add new article'
+[16:43:26]   4. git push origin main
+[16:43:26] ==================================================
+[16:43:26] STEP 5: Newsletter
+[16:43:26] ==================================================
+[16:43:26] TEST MODE: Would send newsletter via ConvertKit
+[16:43:26] Need: ConvertKit API key configured
+[16:43:26] ============================================================
+[16:43:26] PIPELINE COMPLETE!
+[16:43:26] Log saved: C:\Openclaw\agents\longevity-journal\output\pipeline_20260513_1643.log
+[16:43:26] ============================================================

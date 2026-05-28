@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Longevity Journal — AI-Curated Research, Human-Tested</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- ═══════════════════════════════════════════════
+         MASTHEAD (Priority 1)
+         ═══════════════════════════════════════════════ -->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-inner">
+                <!-- Left: Date + Issue -->
+                <div class="masthead-left">
+                    <span class="masthead-date" id="current-date">May 15, 2026</span>
+                    <span class="masthead-issue">Issue No. 001</span>
+                </div>
+                
+                <!-- Center: Logo + Title -->
+                <div class="masthead-center">
+                    <div class="masthead-logo">TLJ</div>
+                    <h1 class="masthead-title">The Longevity Journal</h1>
+                    <div class="masthead-tagline">AI-Curated Research &middot; Human-Tested</div>
+                </div>
+                
+                <!-- Right: Subscribe Button -->
+                <div class="masthead-right">
+                    <a href="#newsletter" class="btn-subscribe">Subscribe Free &rarr;</a>
+                    <div class="masthead-stats">
+                        <span id="subscriber-count">1 subscriber</span> &middot; <span>2,847 studies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════
+         NEWS TICKER
+         ═══════════════════════════════════════════════ -->
+    <div class="ticker-wrap">
+        <div class="ticker-inner">
+            <span>NAD+ meta-analysis of 47 human trials shows NR outperforms NMN for raising NAD+ levels</span>
+            <span>Rapamycin Phase 2 trials in dogs show 9% median lifespan extension</span>
+            <span>DunedinPACE epigenetic clock now available as $200 at-home blood test</span>
+            <span>Zone 2 cardio reduces all-cause mortality by 28% in 10-year cohort study</span>
+            <span>Spermidine supplementation reduces biological age markers by 2.3 years</span>
+            <span>NAD+ meta-analysis of 47 human trials shows NR outperforms NMN for raising NAD+ levels</span>
+            <span>Rapamycin Phase 2 trials in dogs show 9% median lifespan extension</span>
+            <span>DunedinPACE epigenetic clock now available as $200 at-home blood test</span>
+            <span>Zone 2 cardio reduces all-cause mortality by 28% in 10-year cohort study</span>
+            <span>Spermidine supplementation reduces biological age markers by 2.3 years</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════ -->
+    <nav class="site-nav">
+        <div class="container">
+            <div class="site-nav-inner">
+                <a href="#latest" class="active">Latest</a>
+                <a href="#articles">Supplements</a>
+                <a href="#articles">Nutrition</a>
+                <a href="#articles">Exercise</a>
+                <a href="#articles">Sleep</a>
+                <a href="#articles">Biohacking</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+         HERO SECTION (Priority 2)
+         ═══════════════════════════════════════════════ -->
+    <section class="hero" id="latest">
+        <!-- Left Column -->
+        <div class="hero-left">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>Breakthrough &middot; 8 min read</span>
+            </div>
+            
+            <h2 class="hero-headline">NAD+ Precursors: The $500M Question NMN vs. NR vs. Niacin</h2>
+            
+            <p class="hero-excerpt">A new meta-analysis of 47 human trials finally answers which NAD+ booster actually works — and the results surprised even the researchers. We break down the biochemistry, dosages, and what to buy (and what to avoid).</p>
+            
+            <div class="hero-byline">
+                <div class="byline-avatar">SC</div>
+                <div class="byline-text">
+                    <div class="byline-name">Dr. Sarah Chen, MD</div>
+                    <div class="byline-role">Research Lead</div>
+                    <div class="byline-note">Overseen by our human editorial team</div>
+                </div>
+            </div>
+            
+            <a href="nad-precursors.html" class="btn-amber">Read Article &rarr;</a>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="hero-right">
+            <div class="side-card">
+                <div class="side-card-label">Supplements</div>
+                <h4>Rapamycin Microdosing: What We Learned From the Dog Aging Project</h4>
+                <p>The FDA-approved transplant drug is being repurposed as a longevity intervention. Here's what the canine trials revealed.</p>
+                <div class="side-card-meta">
+                    <span class="side-card-time">6 min read</span>
+                    <a href="rapamycin-dogs.html" class="side-card-link">Read &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="side-card">
+                <div class="side-card-label">Biohacking</div>
+                <h4>The $200 Blood Test That Predicts Your Biological Age</h4>
+                <p>DunedinPACE, GrimAge, and PhenoAge — we compare the top epigenetic clocks and which one is worth your money.</p>
+                <div class="side-card-meta">
+                    <span class="side-card-time">7 min read</span>
+                    <a href="epigenetic-clocks.html" class="side-card-link">Read &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="side-card">
+                <div class="side-card-label">Lifestyle</div>
+                <h4>Zone 2 Cardio: The Exercise Prescription for Longevity</h4>
+                <p>Why the world's top longevity researchers all recommend the same boring workout — and how to do it right.</p>
+                <div class="side-card-meta">
+                    <span class="side-card-time">9 min read</span>
+                    <a href="zone-2-cardio.html" class="side-card-link">Read &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         QUICK WIN STRIP
+         ═══════════════════════════════════════════════ -->
+    <section class="quick-win">
+        <div class="container">
+            <div class="quick-win-inner">
+                <div class="quick-win-badge">&#9889; Today's Quick Win</div>
+                <div class="quick-win-text">Take 500mg of NMN with breakfast — human trials show this timing maximizes NAD+ synthesis by 40%.</div>
+                <a href="nad-precursors.html" class="quick-win-link">See the study &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ARTICLES SECTION
+         ═══════════════════════════════════════════════ -->
+    <section class="articles-section" id="articles">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Research</h2>
+                <a href="#" class="view-all">View all &rarr;</a>
+            </div>
+            
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="category-tab active" data-filter="all">All Topics</button>
+                <button class="category-tab" data-filter="supplements">Supplements</button>
+                <button class="category-tab" data-filter="nutrition">Nutrition</button>
+                <button class="category-tab" data-filter="sleep">Sleep</button>
+                <button class="category-tab" data-filter="tech">Tech</button>
+                <button class="category-tab" data-filter="hormones">Hormones</button>
+                <button class="category-tab" data-filter="genetics">Genetics</button>
+            </div>
+            
+            <!-- Article Grid -->
+            <div class="article-grid">
+                <article class="article-card" data-category="supplements">
+                    <div class="card-label">Research</div>
+                    <h3 class="card-title">The Science of Senolytics: Can Clearing 'Zombie Cells' Extend Healthy Lifespan?</h3>
+                    <p class="card-excerpt">Latest evidence on senolytics and their impact on longevity. Can clearing 'zombie cells' extend healthy lifespan?</p>
+                    <div class="card-meta">
+                        <span>10 min read &middot; May 28, 2026</span>
+                        <a href="senolytics-20260528.html" class="card-link">Read &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Featured -->
+                <article class="article-card featured" data-category="supplements">
+                    <div class="card-label">Supplements</div>
+                    <h3 class="card-title">Spermidine: The Wheat Germ Compound That Triggers Autophagy</h3>
+                    <p class="card-excerpt">New human trial shows 1mg/day spermidine supplementation reduces biological age markers by 2.3 years over 12 months. We break down the mechanisms, optimal dosing, and where to source it.</p>
+                    <div class="card-meta">
+                        <span>6 min read &middot; May 12, 2026</span>
+                        <a href="spermidine.html" class="card-link">Read &rarr;</a>
+                    </div>
+                </article>
+                
+                <article class="article-card" data-category="nutrition">
+                    <div class="card-label">Nutrition</div>
+                    <h3 class="card-title">Fasting-Mimicking Diet: 5 Days That Reset Your Immune System</h3>
+                    <p class="card-excerpt">Valter Longo's FMD protocol shows promise for immune regeneration, metabolic reset, and potential cancer prevention.</p>
+                    <div class="card-meta">
+                        <span>10 min read &middot; May 11, 2026</span>
+                        <a href="fasting-mimicking-diet.html" class="card-link">Read &rarr;</a>
+                    </div>
+                </article>
+                
+                <article class="article-card" data-category="sleep">
+                    <div class="card-label">Sleep</div>
+                    <h3 class="card-title">Why Your Sleep Tracker Is Lying to You</h3>
+                    <p class="card-excerpt">Consumer wearables vs. polysomnography: We tested Apple Watch, Oura Ring, and Whoop against lab-grade sleep monitoring.</p>
+                    <div class="card-meta">
+                        <span>7 min read &middot; May 10, 2026</span>
+                        <a href="#" class="card-link">Read &rarr;</a>
+                    </div>
+                </article>
+                
+                <article class="article-card" data-category="tech">
+                    <div class="card-label">Tech</div>
+                    <h3 class="card-title">AI-Driven Drug Discovery: The First Longevity Drug Designed by Machine</h3>
+                    <p class="card-excerpt">Insilico Medicine's AI identified a novel senolytic compound in 18 months — traditional methods would take 6 years.</p>
+                    <div class="card-meta">
+                        <span>9 min read &middot; May 9, 2026</span>
+                        <a href="#" class="card-link">Read &rarr;</a>
+                    </div>
+                </article>
+                
+                <article class="article-card" data-category="hormones">
+                    <div class="card-label">Hormones</div>
+                    <h3 class="card-title">Testosterone Replacement: The TRT Debate Heats Up</h3>
+                    <p class="card-excerpt">New longitudinal study of 12,000 men shows cardiovascular risks may be overestimated. We parse the controversy.</p>
+                    <div class="card-meta">
+                        <span>11 min read &middot; May 8, 2026</span>
+                        <a href="#" class="card-link">Read &rarr;</a>
+                    </div>
+                </article>
+                
+                <article class="article-card" data-category="genetics">
+                    <div class="card-label">Genetics</div>
+                    <h3 class="card-title">APOE4 Carriers: The Alzheimer's Gene Isn't a Death Sentence</h3>
+                    <p class="card-excerpt">Lifestyle interventions show remarkable promise for APOE4-positive individuals. Here's the latest prevention protocol.</p>
+                    <div class="card-meta">
+                        <span>8 min read &middot; May 7, 2026</span>
+                        <a href="#" class="card-link">Read &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         HOW IT WORKS
+         ═══════════════════════════════════════════════ -->
+    <section class="how-it-works" id="about">
+        <div class="container">
+            <h2>How The Longevity Journal Works</h2>
+            
+            <div class="agent-grid">
+                <div class="agent-item">
+                    <div class="agent-number">01</div>
+                    <h4>Research Agent</h4>
+                    <p>Scans PubMed, bioRxiv, and 200+ sources daily for new longevity studies.</p>
+                </div>
+                <div class="agent-item">
+                    <div class="agent-number">02</div>
+                    <h4>Analysis Agent</h4>
+                    <p>Evaluates study quality, sample size, p-values, and conflict of interest disclosures.</p>
+                </div>
+                <div class="agent-item">
+                    <div class="agent-number">03</div>
+                    <h4>Writer Agent</h4>
+                    <p>Translates complex biochemistry into plain English with actionable takeaways.</p>
+                </div>
+                <div class="agent-item">
+                    <div class="agent-number">04</div>
+                    <h4>Fact-Check Agent</h4>
+                    <p>Cross-references claims against primary sources and flags potential inaccuracies.</p>
+                </div>
+            </div>
+            
+            <div class="promise-row">
+                <div class="promise-item">
+                    <h4>No Clickbait</h4>
+                    <p>Every headline backed by peer-reviewed data</p>
+                </div>
+                <div class="promise-item">
+                    <h4>Full Disclosure</h4>
+                    <p>No sponsored content without clear labeling</p>
+                </div>
+                <div class="promise-item">
+                    <h4>Primary Sources</h4>
+                    <p>Every claim linked to original research</p>
+                </div>
+                <div class="promise-item">
+                    <h4>Living Updates</h4>
+                    <p>Articles revised when new evidence emerges</p>
+                </div>
+                <div class="promise-item">
+                    <h4>Human-Tested</h4>
+                    <p>Written by AI, checked by humans</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         NEWSLETTER SECTION (Priority 3)
+         ═══════════════════════════════════════════════ -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <!-- Left -->
+                <div class="newsletter-left">
+                    <h2>Get the Research Without the Noise</h2>
+                    <p>Every Thursday, we send you the three most important longevity breakthroughs of the week — distilled into a 5-minute read you can actually understand. No clickbait. No sponsored content. Just science.</p>
+                    
+                    <div class="social-proof">
+                        <div class="avatar-stack">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=1" alt="">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=2" alt="">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=3" alt="">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=4" alt="">
+                        </div>
+                        <span class="social-proof-text">Join 12,400+ subscribers</span>
+                    </div>
+                </div>
+                
+                <!-- Right: Lead Magnet + Enhanced Form -->
+                <div class="lead-magnet">
+                    <div class="lead-magnet-label">Free Download</div>
+                    <h3>The Longevity Protocol PDF</h3>
+                    <p>12 interventions with the strongest human-trial evidence, ranked by effect size. Includes dosing, timing, and source recommendations. Yours instantly when you subscribe.</p>
+                    
+                    <form action="https://app.kit.com/forms/9441355/subscriptions" 
+                          method="post" 
+                          class="seva-form formkit-form" 
+                          data-sv-form="9441355" 
+                          data-uid="0647d69e35" 
+                          data-format="inline" 
+                          data-version="5" 
+                          data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Welcome to The Longevity Journal! Success! Now check your email to confirm your subscription.","redirect_url":""}},"version":"5"}' 
+                          style="width: 100%;"
+                          id="newsletter-form">
+                        <!-- Honeypot field - invisible to humans, blocks bots -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="website" tabindex="-1" value="" autocomplete="off" id="honeypot">
+                        </div>
+                        
+                        <div class="newsletter-form-fields">
+                            <div class="newsletter-form-row">
+                                <input type="text" 
+                                       name="fields[first_name]" 
+                                       placeholder="First name (optional)" 
+                                       aria-label="First Name"
+                                       style="flex: 1;"
+                                >
+                                <input type="email" 
+                                       name="email_address" 
+                                       placeholder="Enter your email" 
+                                       required 
+                                       aria-label="Email Address"
+                                       style="flex: 2;"
+                                >
+                            </div>
+                            
+                            <div class="human-check-row">
+                                <label>
+                                    <input type="checkbox" 
+                                           name="human_check" 
+                                           required 
+                                           id="human-check"
+                                    >
+                                    <span>I'm a human &mdash; not a bot</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn-newsletter full-width">
+                                Get Free Access &rarr;
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <p class="form-security-note">
+                        &#128274; No spam. Unsubscribe anytime. Your data is never sold.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>The Longevity Journal</h3>
+                    <p>AI-curated longevity research for humans who want to live longer, better. Every article is researched by agents and verified by our human editorial team.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigate</h4>
+                    <a href="#latest">Latest Issue</a>
+                    <a href="#articles">All Articles</a>
+                    <a href="#about">About</a>
+                    <a href="#newsletter">Subscribe</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Topics</h4>
+                    <a href="#articles">Supplements</a>
+                    <a href="#articles">Nutrition</a>
+                    <a href="#articles">Exercise</a>
+                    <a href="#articles">Sleep</a>
+                    <a href="#articles">Biohacking</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="medical-disclaimer.html">Medical Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Longevity Journal. All research summaries are for informational purposes only. Not medical advice.</p>
+                <p>Powered by AI Agents &middot; Built with OpenClaw</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current date in masthead
+        const dateEl = document.getElementById('current-date');
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateEl.textContent = now.toLocaleDateString('en-US', options);
+
+        // Category filter tabs
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter articles
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.article-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Fade-up animations on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.article-card, .agent-item, .promise-item, .side-card').forEach(el => {
+            el.classList.add('fade-up');
+            fadeObserver.observe(el);
+        });
+
+        // Anti-bot protection for newsletter form
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            // Check honeypot - if filled, it's a bot
+            newsletterForm.addEventListener('submit', function(e) {
+                const honeypot = document.getElementById('honeypot');
+                if (honeypot && honeypot.value !== '') {
+                    e.preventDefault();
+                    console.log('Bot blocked by honeypot');
+                    alert('Spam detection triggered. Please try again.');
+                    return false;
+                }
+                
+                // Check human checkbox
+                const humanCheck = document.getElementById('human-check');
+                if (humanCheck && !humanCheck.checked) {
+                    e.preventDefault();
+                    alert('Please confirm you are human by checking the box.');
+                    return false;
+                }
+                
+                // Check for human-like interaction
+                if (!window.humanInteraction) {
+                    e.preventDefault();
+                    alert('Please interact with the page before submitting.');
+                    return false;
+                }
+            });
+        }
+
+        // Track human interaction (mouse movement or key press)
+        window.humanInteraction = false;
+        document.addEventListener('mousemove', function() {
+            window.humanInteraction = true;
+        }, { once: true });
+        document.addEventListener('keydown', function() {
+            window.humanInteraction = true;
+        }, { once: true });
+    </script>
+</body>
+</html>

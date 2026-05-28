@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Longevity Journal - Weekly Brief</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; }
+        .header { background-color: #0a0a0a; padding: 40px 30px; text-align: center; }
+        .header h1 { color: #10b981; margin: 0; font-size: 28px; font-weight: 700; }
+        .header p { color: #9ca3af; margin: 10px 0 0 0; font-size: 16px; }
+        .date-badge { background-color: #065f46; color: white; display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-top: 10px; }
+        .content { padding: 40px 30px; }
+        .content h2 { color: #1f2937; font-size: 24px; margin-bottom: 20px; border-bottom: 2px solid #10b981; padding-bottom: 10px; }
+        .content h3 { color: #065f46; font-size: 20px; margin-top: 30px; margin-bottom: 15px; }
+        .content p { color: #4b5563; font-size: 16px; line-height: 1.7; margin-bottom: 20px; }
+        .article-card { background-color: #f9fafb; border-radius: 8px; padding: 25px; margin: 25px 0; border-left: 4px solid #10b981; }
+        .article-card h4 { color: #1f2937; margin: 0 0 10px 0; font-size: 20px; }
+        .article-card p { color: #6b7280; margin: 0 0 15px 0; font-size: 15px; }
+        .article-meta { color: #9ca3af; font-size: 13px; margin-bottom: 15px; }
+        .article-meta span { margin-right: 15px; }
+        .read-more { display: inline-block; background-color: #10b981; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: 600; font-size: 14px; }
+        .highlight-box { background-color: #ecfdf5; border-left: 4px solid #10b981; padding: 20px; margin: 30px 0; }
+        .highlight-box h3 { color: #065f46; margin: 0 0 10px 0; font-size: 18px; }
+        .highlight-box p { color: #047857; margin: 0; font-size: 15px; }
+        .tip-box { background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 20px; margin: 30px 0; }
+        .tip-box h3 { color: #92400e; margin: 0 0 10px 0; font-size: 18px; }
+        .tip-box p { color: #b45309; margin: 0; font-size: 15px; }
+        .cta-section { background-color: #0a0a0a; color: white; padding: 40px 30px; text-align: center; margin: 40px 0; }
+        .cta-section h3 { color: #10b981; margin: 0 0 15px 0; font-size: 22px; }
+        .cta-section p { color: #d1d5db; margin: 0 0 20px 0; font-size: 16px; }
+        .cta-button { display: inline-block; background-color: #10b981; color: #ffffff; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px; }
+        .footer { background-color: #f9fafb; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb; }
+        .footer p { color: #9ca3af; font-size: 14px; margin: 5px 0; }
+        .footer a { color: #10b981; text-decoration: none; }
+        .divider { height: 1px; background-color: #e5e7eb; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>The Longevity Journal</h1>
+            <p>Weekly Brief: {{ ISSUE_DATE }}</p>
+            <div class="date-badge">Issue #{{ ISSUE_NUMBER }}</div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <h2>This Week's Top Story</h2>
+            
+            <div class="article-card">
+                <h4>{{ FEATURED_ARTICLE_TITLE }}</h4>
+                <div class="article-meta">
+                    <span>📅 {{ ARTICLE_DATE }}</span>
+                    <span>⏱️ {{ READ_TIME }} min read</span>
+                    <span>🔬 {{ CATEGORY }}</span>
+                </div>
+                <p>{{ FEATURED_ARTICLE_SUMMARY }}</p>
+                <a href="{{ FEATURED_ARTICLE_URL }}" class="read-more">Read Full Article</a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h3>Quick Hits</h3>
+            
+            <div class="article-card">
+                <h4>{{ ARTICLE_2_TITLE }}</h4>
+                <div class="article-meta">
+                    <span>⏱️ {{ ARTICLE_2_READ_TIME }} min read</span>
+                    <span>🔬 {{ ARTICLE_2_CATEGORY }}</span>
+                </div>
+                <p>{{ ARTICLE_2_SUMMARY }}</p>
+                <a href="{{ ARTICLE_2_URL }}" class="read-more">Read Now</a>
+            </div>
+            
+            <div class="article-card">
+                <h4>{{ ARTICLE_3_TITLE }}</h4>
+                <div class="article-meta">
+                    <span>⏱️ {{ ARTICLE_3_READ_TIME }} min read</span>
+                    <span>🔬 {{ ARTICLE_3_CATEGORY }}</span>
+                </div>
+                <p>{{ ARTICLE_3_SUMMARY }}</p>
+                <a href="{{ ARTICLE_3_URL }}" class="read-more">Read Now</a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="tip-box">
+                <h3>💡 This Week's Protocol</h3>
+                <p>{{ WEEKLY_TIP }}</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>🔬 Research Snapshot</h3>
+                <p>{{ RESEARCH_SNIPPET }}</p>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Want More?</h3>
+            <p>Visit The Longevity Journal for our complete archive of AI-curated longevity research.</p>
+            <a href="https://gomesy72.github.io/thelongevityjournal/" class="cta-button">Browse All Articles</a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>You're receiving this because you subscribed to The Longevity Journal.</p>
+            <p><a href="https://gomesy72.github.io/thelongevityjournal/privacy-policy.html">Privacy Policy</a> | <a href="https://gomesy72.github.io/thelongevityjournal/terms-of-service.html">Terms</a></p>
+            <p>The Longevity Journal | AI-Curated Research, Human-Tested</p>
+            <p style="font-size: 12px; margin-top: 20px;">If you no longer wish to receive these emails, you can <a href="{{ unsubscribe_url }}">unsubscribe here</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
