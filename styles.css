@@ -1127,18 +1127,24 @@ body {
     }
     
     .site-nav-inner {
-        gap: 16px;
+        gap: 12px;
         overflow-x: auto;
         flex-wrap: nowrap;
         padding-bottom: 8px;
         -webkit-overflow-scrolling: touch;
         justify-content: flex-start;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
     
     .site-nav-inner::-webkit-scrollbar {
         display: none;
+    }
+    
+    .site-nav a {
+        font-size: 12px;
+        white-space: nowrap;
+        padding: 4px 8px;
     }
     
     .hero-headline {
