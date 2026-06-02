@@ -1132,6 +1132,13 @@ body {
         flex-wrap: nowrap;
         padding-bottom: 8px;
         -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .site-nav-inner::-webkit-scrollbar {
+        display: none;
     }
     
     .hero-headline {
